@@ -9,7 +9,8 @@
  Well... not yet, but with your help, at a certain spacetime coordinate, it could be true.
 
 *** So what is it really?
- It is very early days, so there is not a lot of content. 
+ It is very early days, so there is not a lot of content.
+ 
  However, the following bullet points provide the initial target:
 
  - Written in modern C++ (efficiency)
@@ -33,6 +34,7 @@
  Even better, it might fail in some fundamental manner and open up new avenues of research.
 *** Who are you?
  I am Michael Lynch, M.Eng. Electrical and Computer Engineering (University of Waterloo) and B.Sc. Physics (Dalhousie University).
+
  I am a mediocre physicist but a capable software engineer, and this is my contribution.
 
 ** How To Use
