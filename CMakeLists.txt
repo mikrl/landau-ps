@@ -7,12 +7,14 @@ project(
   DESCRIPTION "The Landau Physics Simulator"
   LANGUAGES CXX)
 
-add_subdirectory(app)
+# Add supporting source files
 add_subdirectory(src)
+
+# Add main executable
+add_subdirectory(app)
+
+
 
 # C++ standards
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-
-# Add main executable
-add_executable()
