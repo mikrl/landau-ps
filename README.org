@@ -1,9 +1,13 @@
 #+TITLE: The Landau Physics Simulator
 #+AUTHOR: Michael Lynch (mikrl)
 #+EMAIL: m7lynch@uwaterloo.ca
-#+OPTIONS: toc:2
 
-** Introduction
+** Contents
+1. [[trg_intro][Introduction]]
+2. [[trg_howuse][How to Use]]
+3. [[trg_howcont][How to Contribute]]
+
+** <<trg_intro>>Introduction
 *** What is the Landau Physics Simulator?
  The Landau Physics Simulator is an SIMT powered simulator built in modern C++ and supporting many macro and microscopic physical phenomena. A Python 3.x interface allows researchers to quickly deploy simulations including or excluding a range of physical theories.
 
@@ -38,7 +42,7 @@
 
  I am a mediocre physicist but a capable software engineer, and this is my contribution.
 
-** How To Use
+** <<trg_howuse>>How To Use
  The usage procedure assumes you are using Linux, cmake, and are familiar with the CLI.
 
  1. Clone the repository ~git clone https://github.com/mikrl/landau-ps.git~
@@ -47,7 +51,7 @@
 
  This project will ultimately be compatible with most UNIX-like systems and Windows, in that order of priority.
 
-** How to Contribute
+** <<trg_howcont>>How to Contribute
  Simple in theory, but I still need to iron out style, gitignore, projecty stuff:
  - Grab an issue, fix it, send a pull request.
 
