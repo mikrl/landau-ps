@@ -1,6 +1,7 @@
 #+TITLE: The Landau Physics Simulator
 #+AUTHOR: Michael Lynch (mikrl)
 #+EMAIL: m7lynch@uwaterloo.ca
+#+OPTIONS: toc:1
 
 ** Introduction
 *** What is the Landau Physics Simulator?
