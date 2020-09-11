@@ -1,0 +1,57 @@
+#+TITLE: The Landau Physics Simulator
+#+AUTHOR: Michael Lynch (mikrl)
+#+EMAIL: m7lynch@uwaterloo.ca
+
+** Introduction
+*** What is the Landau Physics Simulator?
+ The Landau Physics Simulator is an SIMT powered simulator built in modern C++ and supporting many macro and microscopic physical phenomena. A Python 3.x interface allows researchers to quickly deploy simulations including or excluding a range of physical theories.
+
+ Well... not yet, but with your help, at a certain spacetime coordinate, it could be true.
+
+*** So what is it really?
+ It is very early days, so there is not a lot of content.
+ 
+ However, the following bullet points provide the initial target:
+
+ - Written in modern C++ (efficiency)
+ - SIMT enabled, most likely using CUDA (parallelizability)
+ - Able to be called from Python (accessibility)
+ - Able to parse differential equations and store as a custom theory (extensibility)
+ - CLI focused but able to display results to the user via a GUI (demonstrability)
+
+ The first steps are to define a space in which to work using Cartesian and polar coordinates and perhaps implement something simple like a heat equation or motion, which can be displayed to the user. This will provide experience in supplying DEs, solving them and presenting output to the user. Integrating CUDA should also be done early.
+
+ Ultimately, this software will grow to encompass classical mechanics, field theories, fluid mechanics, electrodynamics, thermal/statistical physics and even quantum mechanics! If this selection of topics seems strangely familiar to you, read on.
+
+*** Why Landau?
+ Although not as well known as Einstein or von Neumann, the Russian physicist [[https://en.wikipedia.org/wiki/Lev_Landau][Lev Landau]] was cut from the same cloth.
+ In his lifetime, Landau was a prodigious researcher who provided theoretical justifications for many experimentally observed phenomena. His list of achievements is long, but he is probably best known for his theories of superfluidity and phase transitions.
+
+ This project is inspired by the "Course of Theoretical Physics", the legendary series of graduate textbooks by Landau and his student Evgeny Lifshitz. Landau set out to summarize the (large) body of theoretical work by arguing from first principles and providing mathematical justification. Any student who can ingest the complete series will probably do very well in their research.
+
+ Hopefully, this project will do something similar for computational physics, and provide a toolbox for researchers to simulate the systems of their choice with ease. The project should also permit custom and novel theories, because this is where simulation really shines.
+
+ Even better, it might fail in some fundamental manner and open up new avenues of research.
+*** Who are you?
+ I am Michael Lynch, M.Eng. Electrical and Computer Engineering (University of Waterloo) and B.Sc. Physics (Dalhousie University).
+
+ I am a mediocre physicist but a capable software engineer, and this is my contribution.
+
+** How To Use
+ The usage procedure assumes you are using Linux, cmake, and are familiar with the CLI.
+
+ 1. Clone the repository ~git clone https://github.com/mikrl/landau-ps.git~
+ 2. At the project root run ~mkdir build && cd build && cmake ../ && make~
+ 3. Run ~./landau~ for usage information
+
+ This project will ultimately be compatible with most UNIX-like systems and Windows, in that order of priority.
+
+** How to Contribute
+ Simple in theory, but I still need to iron out style, gitignore, projecty stuff:
+ - Grab an issue, fix it, send a pull request.
+
+ Financial contributions are also welcome, but not set up right now [Paypal details] [Bitcoin address].
+
+ #  LocalWords:  mikrl SIMT CUDA parallelizability CLI DEs von Neumann
+ #  LocalWords:  Lev superfluidity Evgeny Lifshitz cmake mkdir cd
+ #  LocalWords:  gitignore projecty Paypal
