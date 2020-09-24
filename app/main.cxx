@@ -1,4 +1,5 @@
 #include <cmake_test.hxx>
+#include <experiment.hxx>
 
 #include <iostream>
 #include <vector>
@@ -12,17 +13,10 @@ void usage(string prog_name){
   cout << "usage: " << prog_name << "\n";
 }
 
-struct SimConfig{
-  string geometry;
-  vector<float> extent;
-  string discretization;
-  string output;
-} ;
-
 enum Geometry{
-  euclidean,
-  cylindrical,
-  spherical
+  EUCLIDEAN,
+  CYLINDRICAL,
+  SPHERICAL
 };
 
 int main(int argc, char **argv) {
@@ -62,7 +56,7 @@ int main(int argc, char **argv) {
       break;
     }
     case ':': {
-
+      
       break;
     }
     case '?': {
@@ -84,6 +78,7 @@ int main(int argc, char **argv) {
     cerr << "Usage: ";
     exit(2);
   }
+  
   
   return 0;
 }
