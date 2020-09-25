@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <memory> // Unique Ptr
 #include <string>
 #include <unistd.h> //POSIX compliant getopt
 
@@ -54,11 +55,7 @@ int main(int argc, char **argv) {
     case 'o': { // 'o' for output method
       configuration.output = optarg;
       break;
-    }
-    case ':': {
-      
-      break;
-    }
+    }   
     case '?': {
       //cerr << format("Unrecognized option '-{}'\n", optopt);
       cerr << "Unrecognized option '-"<< optopt <<"'\n";
@@ -78,7 +75,8 @@ int main(int argc, char **argv) {
     cerr << "Usage: ";
     exit(2);
   }
-  
+
+  // unique_ptr<Simulation> simulation_env = make_unique<Simulation>(configuration);
   
   return 0;
 }

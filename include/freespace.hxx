@@ -3,12 +3,15 @@
 
 #include<vector>
 
+struct CoordinateSystem{};
+struct Discretization{};
+
 class SpatialVolume
 {
 private:
 
 public:
-  FreeSpace(const CoordinateSystem coord,
+  SpatialVolume(const CoordinateSystem coord,
 	    const std::vector<double> coord_ranges,
 	    const Discretization discret_scheme,
 	    const unsigned int num_cells);  
