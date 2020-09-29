@@ -11,7 +11,7 @@
 using namespace std;
 
 void usage(string prog_name){
-  cout << "usage: " << prog_name << "\n";
+  cerr << "Usage: " << prog_name << "\n";
 }
 
 enum Geometry{
@@ -65,6 +65,7 @@ int main(int argc, char **argv) {
     default: {
       //cerr << format("Shouldn't see this! Opt is {}", opt) << "\n";
       cerr << "Shouldn't see this! Opt is {}" << optopt << ")\n";
+      exit(2);
     }      
     }
   }
@@ -72,7 +73,7 @@ int main(int argc, char **argv) {
     err_flg++;
   }
   if (err_flg){
-    cerr << "Usage: ";
+    usage(argv[0]);
     exit(2);
   }
 
