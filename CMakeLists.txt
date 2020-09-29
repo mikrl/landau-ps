@@ -7,6 +7,13 @@ project(
   DESCRIPTION "The Landau Physics Simulator"
   LANGUAGES CXX)
 
+option(USE_CLANG "build application with clang" OFF) # OFF is the default
+
+if(USE_CLANG)
+  set(CMAKE_C_COMPILER clang)
+  set(CMAKE_CPP_COMPILER clang++)
+endif(USE_CLANG)
+
 # Only do these if this is the main project, and not if it is included through add_subdirectory
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
