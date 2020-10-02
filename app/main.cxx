@@ -23,7 +23,8 @@ enum Geometry{
 int main(int argc, char **argv) {
   int opt;
   int err_flg = 0;
-
+  int test_flg = 0; 
+  
   SimConfig configuration;
   // Flags for whether the geometry, coordinate system and discretization
   // Are configured
@@ -34,7 +35,7 @@ int main(int argc, char **argv) {
 
   
   
-  while((opt = getopt(argc, argv, ":g:c:d:o:")) != -1){
+  while((opt = getopt(argc, argv, ":g:c:d:o:t")) != -1){
     switch(opt){
     case 'g': { // 'g' for geometry
       configuration.geometry = optarg;
@@ -55,7 +56,11 @@ int main(int argc, char **argv) {
     case 'o': { // 'o' for output method
       configuration.output = optarg;
       break;
-    }   
+    }
+    case 't': { // 't' for testing purposes
+      test_flg++;
+      break;
+    }
     case '?': {
       //cerr << format("Unrecognized option '-{}'\n", optopt);
       cerr << "Unrecognized option '-"<< optopt <<"'\n";
@@ -75,6 +80,10 @@ int main(int argc, char **argv) {
   if (err_flg){
     usage(argv[0]);
     exit(2);
+  }
+  if (test_flg){
+
+    exit(0);
   }
 
   // unique_ptr<Simulation> simulation_env = make_unique<Simulation>(configuration);
