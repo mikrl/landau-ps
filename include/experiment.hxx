@@ -14,7 +14,7 @@
 //enum BoundaryConditions {periodic, fixed
 
 struct SimConfig{
-  std:: string geometry;
+  std::string geometry;
   std::vector<float> extent;
   std::string discretization;
   std::string output;
