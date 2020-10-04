@@ -12,3 +12,43 @@ TEST_CASE("Test SimConfig", "[main]" ){
   REQUIRE ( test_simconfig.discretization == "standard");
   REQUIRE ( test_simconfig.output == "cli");
 }
+
+TEST_CASE("Test", "[main]" ){
+
+  REQUIRE ( 0 );
+}
+
+TEST_CASE("Test", "[main]" ){
+
+  REQUIRE ( 0 );
+}
+
+TEST_CASE("Test", "[main]" ){
+
+  REQUIRE ( 0 );
+}
+
+TEST_CASE("Test", "[main]" ){
+
+  REQUIRE ( 0 );
+}
+
+TEST_CASE("Test", "[main]" ){
+
+  REQUIRE ( 0 );
+}
+
+TEST_CASE("Test", "[main]" ){
+
+  REQUIRE ( 0 );
+}
+
+TEST_CASE("Test", "[main]" ){
+
+  REQUIRE ( 0 );
+}
+
+// TEST_CASE("Test", "[main]" ){
+
+//   REQUIRE ( 0 );
+// }
