@@ -7,7 +7,7 @@ project(
   DESCRIPTION "The Landau Physics Simulator"
   LANGUAGES CXX)
 
-option(USE_CLANG "build application with clang" OFF) # OFF is the default
+option(USE_CLANG "build application with clang" ON) # OFF is the default
 
 if(USE_CLANG)
   set(CMAKE_C_COMPILER clang)

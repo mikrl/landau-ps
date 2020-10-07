@@ -56,9 +56,6 @@ public:
    * Takes a particle ID as input and removes the particle from the system.
    */
   void RemoveParticle(std::string particle_ID);
-  /** AddField.
-   * Takes a FieldConfig as input and adds a new force field to the system.
-   */
   /** GetParticles.
    * Returns a vector containing the names of all the particles
    */
@@ -67,6 +64,9 @@ public:
    * Reads the Simulation configuration and returns the struct
    */
   SimConfig GetConfiguration();
+  /** AddField.
+   * Takes a FieldConfig as input and adds a new force field to the system.
+   */
   void AddField(FieldConfig new_field_cfg);
   /** RemoveField.
    * Takes a field ID as input and removes the field from the system.

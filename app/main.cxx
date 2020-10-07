@@ -1,5 +1,5 @@
 #include <cmake_test.hxx>
-#include <experiment.hxx>
+#include <simulation.hxx>
 
 #include <iostream>
 #include <vector>
