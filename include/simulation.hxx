@@ -14,12 +14,19 @@
 //enum BoundaryConditions {periodic, fixed, free}
 
 struct SimConfig{
+  float time_step;
   std::string geometry;
-  std::vector<float> extent;
-  std::string discretization;
-  unsigned long max_cells;
   std::string output;
-} ;
+};
+
+// struct SimConfig{
+//   float time_step;
+//   std::string geometry;
+//   std::vector<float> extent;
+//   std::string discretization;
+//   unsigned long max_cells;
+//   std::string output;
+// } ;
 
 //!  The Simulation class
 /*!
@@ -53,7 +60,16 @@ public:
   void AddParticle();
   void AddParticle(ParticleConfig new_particle_cfg);
   /** RemoveParticle.
-   * Takes a particle ID as input and removes the particle from the system.
+ 
+
+
+
+
+
+
+
+
+  * Takes a particle ID as input and removes the particle from the system.
    */
   void RemoveParticle(std::string particle_ID);
   /** GetParticles.
