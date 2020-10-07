@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch.hpp>
-#include<experiment.hxx>
+#include<simulation.hxx>
 
 #include <algorithm>
 
@@ -11,6 +11,7 @@ TEST_CASE("Test SimConfig", "[simcfg]" ){
   SimConfig test_simconfig  = {"cylindrical", {0.0}, "standard", 100,  "cli"};
   REQUIRE ( test_simconfig.geometry == "cylindrical");
   REQUIRE ( test_simconfig.extent[0] == 0.0) ;
+  REQUIRE ( test_simconfig.max_cells == 1000);
   REQUIRE ( test_simconfig.discretization == "standard");
   REQUIRE ( test_simconfig.output == "cli");
 }
@@ -37,13 +38,6 @@ TEST_CASE("Initialize and delete a Simulation object", "[initsim]" ){
   //REQUIRE ( 1 );
 }
 
-// TEST_CASE("Add a field", "[addfield]" ){
-//   SimConfig test_cfg;
-//   Simulation test_sim (test_cfg);
-//   test_sim.AddField()
-//   REQUIRE ( 0 );
-// }
-
 TEST_CASE("Add and remove particles", "[addparticle]" ){
   SimConfig test_cfg;
   Simulation test_sim (test_cfg);
@@ -60,30 +54,42 @@ TEST_CASE("Add and remove particles", "[addparticle]" ){
   REQUIRE ( particle_list.size() == 0 );  
 }
 
-TEST_CASE("Test", "[main]" ){
+// TEST_CASE("Add and remove fields", "[addfield]" ){
+//   SimConfig test_cfg;
+//   Simulation test_sim (test_cfg);
+  
+//   auto field_list = test_sim.GetFieldList();
+//   REQUIRE ( field_list.size() == 0 );
 
-  REQUIRE ( 0 );
-}
+//   test_sim.AddField();
+//   field_list = test_sim.GetFieldList();
+//   REQUIRE ( field_list.size() == 1 );
 
-TEST_CASE("Test", "[main]" ){
+//   auto field_ID = field_list[0];
+//   test_sim.RemoveField(field_ID);
+//   field_list = test_sim.GetFieldList();
+//   REQUIRE ( field_list.size() == 0 );  
+// }
 
-  REQUIRE ( 0 );
-}
+// TEST_CASE("Test", "[main]" ){
 
-TEST_CASE("Test", "[main]" ){
+//   REQUIRE ( 0 );
+// }
 
-  REQUIRE ( 0 );
-}
+// TEST_CASE("Test", "[main]" ){
 
-TEST_CASE("Test", "[main]" ){
+//   REQUIRE ( 0 );
+// }
 
-  REQUIRE ( 0 );
-}
+// TEST_CASE("Test", "[main]" ){
 
-TEST_CASE("Test", "[main]" ){
+//   REQUIRE ( 0 );
+// }
 
-  REQUIRE ( 0 );
-}
+// TEST_CASE("Test", "[main]" ){
+
+//   REQUIRE ( 0 );
+// }
 
 // TEST_CASE("Test", "[main]" ){
 
