@@ -44,7 +44,7 @@ private:
   
 public:
   /** Constructor.
-   * Returns a simulation object with default configuration (euclidean, 10m x 10m x 10m, 1000 cells)
+   * Returns a simulation object with default configuration (euclidean, )
    * Or takes a configuration as input and returns a pointer.
    */ 
   Simulation(); // default
@@ -61,14 +61,6 @@ public:
   void AddParticle(ParticleConfig new_particle_cfg);
   /** RemoveParticle.
  
-
-
-
-
-
-
-
-
   * Takes a particle ID as input and removes the particle from the system.
    */
   void RemoveParticle(std::string particle_ID);
