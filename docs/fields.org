@@ -1,0 +1,33 @@
+#+TITLE: Computational Primitives
+This file contains the 
+* General Field
+  - Has an integer n dimensions
+  - Has a given extent over space in each direction
+  - Has a d_i discretization over each dimension, leading to...
+  - prod_{i=1}^{n} d_i number of cells where d_i is the discretization
+  - can be rolled out into a straight array
+  - each cell has a general element associated with it
+  - boundary conditions allow accessing elements outside of the field
+    - rules for the values returned are supplied by a boundary condition object
+** Tensor Field (Skip for now)
+*** Scalar Field
+    - Field elements are scalars
+**** Electric Field
+     - Field elements are real values
+     - Field elements interact via the Lorentz force
+*** Vector Field
+    - Field elements are vectors
+**** Magnetic Field
+     - Field elements are real vector valued
+     - Field elements interact via the Lorentz force
+* General Boundary Conditions
+  - Maps a supplied index to an index within the field
+  - In bounds accesses simply access the field element
+  - OOB accesses are handled according to a function 
+** Dummy Boundary Conditions
+   - Throws an exception on an OOB access
+** Periodic Boundary Conditions
+   - Maps an OOB access back into the field modulo each dimension
+** Fixed Boundary Conditions
+   - Maps an OOB access to a fixed value on the boundary
+
