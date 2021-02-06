@@ -1,7 +1,8 @@
 #ifndef LANDAU_CORE_SCALARFIELD_H_
 #define LANDAU_CORE_SCALARFIELD_H_
 
-#include "Field.h"
+#include "field.h"
+
 
 class ScalarField: public Field{
 

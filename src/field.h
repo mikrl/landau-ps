@@ -1,9 +1,14 @@
 #ifndef LANDAU_CORE_FIELD_H_
 #define LANDAU_CORE_FIELD_H_
 
+#include <pair>
 #include <vector>
 
-#include "utils/configurations.h"
+typedef struct FieldConfig {
+  unsigned short int dimension;
+  std::vector<std::pair<float, float>> spatial_extent;
+  std::vector<unsigned long int> discretization;
+}FieldConfig;
 
 class Field{
 private:
