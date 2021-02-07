@@ -6,14 +6,3 @@
 
 #include "field.h"
 
-Field::Field(FieldConfig config){
-  auto dimension = config.dimension;
-  auto extent = config.spatial_extent;
-  auto discretization = config.discretization;
-  
-  _dimension = config.dimension;
-  
-
-  
-  std::cout << "Generic field constructor." << endl;
-}
