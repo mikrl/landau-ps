@@ -5,7 +5,7 @@
 
 
 class ScalarField: public Field{
-
+  
 };
 
 #endif
