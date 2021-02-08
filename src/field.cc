@@ -11,14 +11,10 @@
 #include "field.h"
 
 Field::Field(FieldConfig config){
-  
-  ConfigureField(config);
+  dimension_ = config.dimension;
+  spatial_extent_ = config.spatial_extent;
+  discretization_ = config.discretization;
 }
-
-void Field::ConfigureField(FieldConfig config){
-  InitializeField(config);
-}
-
 
 std::vector<float> Field::get_coordinate_at_cell(std::vector<unsigned long int> cell_indices){
   if (cell_indices.size() != this->discretization_.size()){

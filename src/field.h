@@ -19,11 +19,12 @@ private:
   std::vector<std::pair<float,float>> spatial_extent_;
   std::vector<unsigned long int> discretization_;
   void ConfigureField(FieldConfig configuration);
-  virtual void InitializeField(FieldConfig configuration) = 0;
 
   public:
   virtual ~Field();
+  //virtual void InitializeFieldValues() = 0;
   Field(FieldConfig config);
+
   std::vector<float> get_coordinate_at_cell(std::vector<unsigned long int> cell_index);
 
   // // Field additive inverse
