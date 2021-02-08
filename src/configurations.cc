@@ -30,8 +30,8 @@ bool ConfigurationValid(FieldConfig config){
 			    << ", should be " << field_dimension;
     config_valid = false;
   } else {
-    for (idx = 0; idx < field_discretization.size(); idx++){
-      if (not field_discretization[idx] > 0){
+    for (int idx = 0; idx < field_discretization.size(); idx++){
+      if (not (field_discretization[idx] > 0)){
 	BOOST_LOG_TRIVIAL(error) << "Discretization on dimension " << idx+1
 				 << " must be greater than 0 cells.";
 	config_valid = false;
