@@ -1,6 +1,7 @@
 #ifndef LANDAU_CORE_SIMULATION_H_
 #define LANDAU_CORE_SIMULATION_H_
 
+#include <string>
 #include <vector>
 
 #include "field.h"
